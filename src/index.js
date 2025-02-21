@@ -9,7 +9,7 @@ saludarButton.addEventListener("click", (event) => {
   let fechaActual = new Date();
   let hora = fechaActual.getHours();
   const nombreSaludo = nombre.value;
-  div.innerHTML = "<p>" + saludarPorHora(7) + nombreSaludo + "</p>";
+  div.innerHTML = "<p>" + saludarPorHora(hora) + nombreSaludo + "</p>";
 });
 
 function saludarPorHora(hora) {
