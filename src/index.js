@@ -9,7 +9,9 @@ saludarButton.addEventListener("click", (event) => {
   let fechaActual = new Date();
   let hora = fechaActual.getHours();
   const nombreSaludo = nombre.value;
-  div.innerHTML = "<p>" + saludarPorHora(hora) + nombreSaludo + "</p>";
+  const identificadorGenero = esVaron();
+  div.innerHTML = "<p>" + saludarPorHora(hora) + identificadorGenero + " " +
+   nombreSaludo +  "</p>";
 });
 
 function saludarPorHora(hora) {
@@ -20,4 +22,11 @@ function saludarPorHora(hora) {
   } else {
     return "Buenas noches ";
   }
+}
+
+function esVaron() {
+  if (document.querySelector("#masculino").checked == true) {
+    return "Sr. ";
+  }
+  return "Sra. ";
 }
