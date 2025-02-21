@@ -6,17 +6,23 @@
     <title>Saludador</title>
 </head>
 <body>
-    <div>Nombre:</div>
+    <form id="languageForm">
+        <input type="radio" id="spanish" name="idioma" value="spanish" checked>
+        <label for="spanish">Español</label>
+        <input type="radio" id="english" name="idioma" value="english">
+        <label for="english">English</label>
+    </form>
+    <div data-translate="name">Nombre:</div>
     <input type="text" id="nombre">
     <form>
         <input type="radio" id="masculino" name="genero" value="masculino">
-        <label for="masculino">Masculino</label>
+        <label for="masculino" data-translate="male">Masculino</label>
         <input type="radio" id="femenino" name="genero" value="femenino" checked>
-        <label for="femenino">Femenino</label>
+        <label for="femenino" data-translate="female">Femenino</label>
     </form>
-    <div>Edad:</div>
+    <div data-translate="age">Edad:</div>
     <input type="number" id="edad">
-    <button id="saludar_button">Saludar</button>
+    <button id="saludar_button" data-translate="greet">Saludar</button>
     <div id="saludo"></div>
     
     <script src="./src/index.js"></script>
